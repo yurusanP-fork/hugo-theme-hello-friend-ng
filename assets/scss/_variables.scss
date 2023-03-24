@@ -20,6 +20,8 @@ $dark-color-secondary: #b3b3bd;
 $dark-border-color: #4e4e57;
 $dark-table-color: #4e4e57;
 
+$accent-color: #b3b3bd;
+
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
 
@@ -31,3 +33,12 @@ $media-size-tablet: "(max-width: 900px)";
 
 /* Content */
 $max-width: 860px;
+
+$font-serif-stack: "Noto Serif", "Noto Serif SC", serif;
+$font-mono-stack: "Iosevka", monospace;
+
+$logo-font-weight: 600;
+$h1-font-size: 1.25rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.25rem;

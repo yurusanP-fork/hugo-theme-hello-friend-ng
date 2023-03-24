@@ -2,7 +2,7 @@
     {{ $paginator := .Paginate .Data.Pages }}
     
     <main class="posts">
-        <h1>{{ .Title }}</h1>
+        {{/*  <h1>{{ .Title }}</h1>  */}}
 
         {{ if .Content }}
             <div class="content">{{ .Content }}</div>
@@ -15,16 +15,16 @@
                 <ul class="posts-list">
                     {{ range .Pages }}
                         <li class="post-item">
-                            <a href="{{.Permalink}}">
-                                <span class="post-title">{{.Title}}</span>
-                                <span class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                        {{ .Date.Format .Site.Params.dateformShort }}
-                                    {{ else }}
-                                        {{ .Date.Format "Jan 2"}}
-                                    {{ end }}
-                                </span>
-                            </a>
+                            <span class="post-day">
+                                {{ if .Site.Params.dateformNum }}
+                                    {{ .Date.Format .Site.Params.dateformNum }}
+                                {{ else }}
+                                    {{ .Date.Format "2023/03/23"}}
+                                {{ end }}
+                            </span>
+                            <div class="post-title">
+                                <a class="hover-underline" href="{{.Permalink}}">{{.Title}}</a>
+                            </div>
                         </li>
                     {{ end }}
                 </ul>

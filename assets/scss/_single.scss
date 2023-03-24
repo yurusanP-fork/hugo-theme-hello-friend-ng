@@ -1,4 +1,25 @@
 .post {
+  h1::before {
+    content: '#₀ ';
+    // float: left;
+    font-family: $font-mono-stack;
+  }
+  
+  h2::before {
+    content: '#₁ ';
+    font-family: $font-mono-stack;
+  }
+
+  h3::before {
+    content: '#₂ ';
+    font-family: $font-mono-stack;
+  }
+
+  h4::before {
+    content: '#₃ ';
+    font-family: $font-mono-stack;
+  }
+
   width: 100%;
   max-width: 800px;
   text-align: left;
@@ -8,19 +29,7 @@
     max-width: 600px;
   }
 
-  &-date {
-    &:after {
-      content: '—';
-    }
-  }
-
   &-title {
-    font-size: 2.625rem;
-    margin: 0 0 20px;
-    @media #{$media-size-phone} {
-      font-size: 2rem;
-    }
-
     a {
       text-decoration: none;
     }
@@ -35,10 +44,6 @@
     a {
       text-decoration: none;
     }
-  }
-
-  &-content {
-    margin-top: 30px;
   }
 
   &-cover {
