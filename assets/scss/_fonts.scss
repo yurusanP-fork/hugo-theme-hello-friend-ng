@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @font-face {
-  font-family: 'Iosevka';
+  font-family: 'Iosevka Fixed';
   font-weight: normal;
   font-style: normal;
-  src: local(Iosevka), url('./../../static/fonts/Iosevka.ttf') format('truetype');
+  src: url('./../../static/fonts/iosevka-fixed-regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Iosevka';
+  font-family: 'Iosevka Fixed';
   font-weight: bold;
   font-style: normal;
-  src: local(Iosevka Bold),
-    url('./../../static/fonts/Iosevka-Bold.ttf') format('truetype');
+  src: url('./../../static/fonts/iosevka-fixed-bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Iosevka';
+  font-family: 'Iosevka Fixed';
   font-style: italic;
-  src: local(Iosevka Italic),
-    url('./../../static/fonts/Iosevka-Italic.ttf') format('truetype');
+  src: url('./../../static/fonts/iosevka-fixed-italic.ttf') format('truetype');
 }

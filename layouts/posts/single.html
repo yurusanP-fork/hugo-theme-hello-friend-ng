@@ -1,18 +1,9 @@
 {{ define "main" }}
   <main class="post">
-
-    <div class="post-info">
-      <p>
-        {{ if .IsTranslated }} | {{ i18n "postAvailable" }}
-          {{ range .Translations }}
-              <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
-          {{ end}}
-        {{ end }}
-      </p>
-    </div>
-
     <article>
       <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+
+      <hr />
 
       {{ with .Params.Description }}
         <div class="post-excerpt">{{ . }}</div>
@@ -29,7 +20,6 @@
       {{ end }}
 
       {{- if .Params.toc }}
-        <hr />
         <aside id="toc">
           <div class="toc-title">{{ i18n "tableOfContents" }}</div>
           {{ .TableOfContents }}

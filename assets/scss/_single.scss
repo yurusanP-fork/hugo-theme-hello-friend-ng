@@ -1,7 +1,6 @@
 .post {
   h1::before {
     content: '#₀ ';
-    // float: left;
     font-family: $font-mono-stack;
   }
   
@@ -29,9 +28,17 @@
     max-width: 600px;
   }
 
-  &-title {
-    a {
-      text-decoration: none;
+  &-title a {
+    text-decoration: none;
+  }
+
+  &-content a {
+    // light theme
+    [data-theme=light] & {
+      color: $light-accent-color;
+    }
+    [data-theme=dark] & {
+      color: $dark-accent-color;
     }
   }
 
@@ -64,17 +71,12 @@
   }
 
   &-info {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    line-height: normal;
     @include dimmed;
+    font-size: 0.8rem;
 
     p {
-      margin: 0.8em 0;
-    }
-
-    a:hover {
-      border-bottom: 1px solid white;
+      display: flex;
+      align-items: center;
     }
 
     svg {
@@ -82,8 +84,10 @@
     }
 
     .tag {
-      margin-right: 0.5em;
-
+      margin-right: 0.8em;
+      &:last-child {
+        margin-right: 0;
+      }
       &::before {
         content: "#";
       }
@@ -91,9 +95,8 @@
 
     .feather {
       display: inline-block;
-      vertical-align: -.125em;
-      width: 1em;
-      height: 1em;
+      width: 0.8rem;
+      height: 0.8rem;
     }
   }
 

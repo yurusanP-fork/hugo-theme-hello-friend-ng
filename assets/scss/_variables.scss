@@ -14,13 +14,14 @@ $light-table-color: #dcdcdc;
 $dark-background: #232425;
 $dark-background-secondary: #3b3d42;
 $dark-background-header: #1b1c1d;
-$dark-color: #a9a9b3;
+$dark-color: #eaeaea;
 $dark-color-variant: white;
 $dark-color-secondary: #b3b3bd;
 $dark-border-color: #4e4e57;
 $dark-table-color: #4e4e57;
 
-$accent-color: #b3b3bd;
+$light-accent-color: firebrick;
+$dark-accent-color: #ff6b6b;
 
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
@@ -35,10 +36,6 @@ $media-size-tablet: "(max-width: 900px)";
 $max-width: 860px;
 
 $font-serif-stack: "Noto Serif", "Noto Serif SC", serif;
-$font-mono-stack: "Iosevka", monospace;
+$font-mono-stack: "Iosevka Fixed", monospace;
 
 $logo-font-weight: 600;
-$h1-font-size: 1.25rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.25rem;
-$h4-font-size: 1.25rem;

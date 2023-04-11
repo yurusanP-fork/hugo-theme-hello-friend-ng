@@ -58,7 +58,10 @@ body {
   }
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: bold;
   font-size: 1.2rem;
   padding: 0;
@@ -173,30 +176,11 @@ em, i, strong {
 
 code {
   font-family: $font-mono-stack;
-  font-display: auto;
-  font-feature-settings: normal;
-  padding: 1px 6px;
-  margin: 0 2px;
-  border-radius: 5px;
+  border: 1px dotted #ccc;
+  border-radius: 3px;
+  padding: 0.1em 0.25em;
   font-size: 0.95rem;
-  // Default
-  background: $light-background-secondary;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-secondary;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-secondary;
-  }
-
-  [data-theme=dark] & {
-    background: $dark-background-secondary;
-  }
-
-  [data-theme=light] & {
-    background: $light-background-secondary;
-  }
+  color: inherit;
 }
 
 pre {
@@ -219,28 +203,12 @@ pre {
   }
 
   code {
-    background: none !important;
+    background: none;
+    border: none;
     margin: 0;
     padding: 0;
     font-size: inherit;
-    // Default
-    color: #ccc;
-
-    @media (prefers-color-scheme: dark) {
-      color: inherit;
-    }
-  
-    @media (prefers-color-scheme: light) {
-      color: #ccc;
-    }
-  
-    [data-theme=dark] & {
-      color: inherit;
-    }
-  
-    [data-theme=light] & {
-      color: #ccc;
-    }
+    color: inherit;
   }
 }
 
@@ -253,7 +221,7 @@ blockquote {
     border-left: 3px solid $dark-color
   }
   
-  margin: 1.2em;
+  margin: 1.2rem;
   padding: 10px 20px;
 
   p:first-of-type {
@@ -267,12 +235,24 @@ blockquote {
 
 ul,
 ol {
-  margin-left: 1.2em;
+  margin-left: 1.2rem;
   padding: 0;
 }
 
 ol ol {
   list-style-type: lower-alpha;
+}
+
+a.footnote-ref {
+  &::before {
+    content: '[';
+  }
+
+  &:after {
+    content: ']';
+  }
+
+  text-decoration: none;
 }
 
 .container {

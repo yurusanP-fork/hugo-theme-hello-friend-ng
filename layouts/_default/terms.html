@@ -1,0 +1,24 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate .Data.Pages }}
+    
+    <main class="posts">
+        <h1>{{ .Title }}</h1>
+
+        <hr />
+
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        <ul class="posts-list">
+            {{ range (sort .Pages "Title") }}
+                <li class="post-item">
+                    <span class="post-title">
+                        <a class="hover-underline" href="{{.Permalink}}">{{.Title}}</a>
+                    </span>
+                </li>
+            {{ end }}
+        </ul>
+    {{ partial "pagination-list.html" . }}
+    </main>
+{{ end }}
