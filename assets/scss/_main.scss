@@ -220,7 +220,7 @@ blockquote {
   [data-theme=dark] & {
     border-left: 3px solid $dark-color
   }
-  
+
   margin: 1.2rem;
   padding: 10px 20px;
 
@@ -359,6 +359,6 @@ hr {
 }
 
 // Prism JS Additionals
-.highlight {
-  margin: 30px auto;
-}
+// .highlight {
+//   margin: 30px auto;
+// }
